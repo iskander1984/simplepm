@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<actionScriptProperties mainApplicationPath="agilepmui.mxml" projectUUID="1fb61a98-ec23-4cca-b806-0a4c8bcf6be8" version="6">
+  <compiler additionalCompilerArguments="-locale en_US -services ${DOCUMENTS}/agilepm/web-app/WEB-INF/flex/services-config.xml -sp ${DOCUMENTS}/agilepm/grails-app/i18n -define=GFS::security,false" autoRSLOrdering="true" copyDependentFiles="true" flex3CompatMode="true" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="web-app" rootURL="" sourceFolderPath="flex_src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
+    <compilerSourcePath/>
+    <libraryPath defaultLinkType="1">
+      <libraryPathEntry kind="4" path=""/>
+    </libraryPath>
+    <sourceAttachmentPath/>
+  </compiler>
+  <applications>
+    <application path="agilepmui.mxml"/>
+  </applications>
+  <modules/>
+  <buildCSSFiles/>
+</actionScriptProperties>

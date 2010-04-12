@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="400" height="300">
+	<mx:VBox width="200" height="120" styleName="loginBox">
+		<mx:Label id="usernameLabel" text="username:" />
+		<mx:TextInput id="usernameText" enter="passwordText.setFocus()" styleName="loginTextInput" />
+		
+		<mx:Label id="passwordLabel" text="password:" />
+		<mx:TextInput
+			id="passwordText"
+			styleName="loginTextInput"
+			displayAsPassword="true"
+			enter="login()" />
+	</mx:VBox>
+</mx:Canvas>

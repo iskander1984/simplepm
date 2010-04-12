@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute"
+				backgroundColor="#e2e2e2">
+	<mx:Script>
+		<![CDATA[
+			import org.opensoft.agilepm.domain.Task;
+			private function onAddBtnClick(event:MouseEvent):void
+			{
+				var task:Task = new Task();
+				task.name = taskName.text;
+				task.description = taskDescription.text;
+				taskService.createTask(task);
+			}
+		]]>
+	</mx:Script>
+	<mx:RemoteObject id="ro" destination="userService"/>
+	<mx:RemoteObject id="taskService" destination="taskService"/>
+	<mx:Button label="Hello" click="taskService.list()" x="300" y="217"/>
+	<mx:Button label="Add new task" x="56" y="111" click="onAddBtnClick(event)"/>
+	<mx:AdvancedDataGrid id="adg1" dataProvider="{taskService.list.lastResult}" x="206" y="41">
+		<mx:columns>
+			<mx:AdvancedDataGridColumn headerText="Name" dataField="name"/>
+			<mx:AdvancedDataGridColumn headerText="Decription" dataField="description"/>
+			<mx:AdvancedDataGridColumn headerText="Priority" dataField="priority"/>
+		</mx:columns>
+		
+	</mx:AdvancedDataGrid>
+	<mx:TextInput x="38" y="160" id="taskName"/>
+	<mx:TextInput x="38" y="193" id="taskDescription"/>
+	
+</mx:Application>

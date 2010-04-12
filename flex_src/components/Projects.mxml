@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="400" height="300">
+	
+	<mx:DataGrid id="projectsDataGrid" horizontalScrollPolicy="auto"
+				 dataProvider="{Pomodo.models.projects}"
+				 height="{this.height - 270}" right="5" top="0" left="5" click="selectProjectToEdit()">
+		<mx:columns>
+			<mx:DataGridColumn dataField="name" headerText="Name" width="200"/>
+			<mx:DataGridColumn dataField="notes" headerText="Notes" width="{projectsDataGrid.width - 500}"/>
+			<mx:DataGridColumn dataField="projectCategory" headerText="Category" width="193"/>
+		
+		</mx:columns>
+	</mx:DataGrid>
+	<mx:Button label="+" bottom="141" left="10" styleName="addItemButton" click="newProject()"/>
+	
+</mx:Canvas>
